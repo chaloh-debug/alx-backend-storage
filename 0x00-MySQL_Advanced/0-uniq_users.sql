@@ -1,8 +1,7 @@
 -- create table with some attributes
 -- should not fail if table exists
-DROP TABLE IF EXISTS users;
-CREATE TABLE users (
-    id INT AUTOINCREMENT PRIMARY KEY NOTNULL,
-    email VARCHAR(255) NOTNULL UNIQUE,
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
     name VARCHAR(255)
 );
